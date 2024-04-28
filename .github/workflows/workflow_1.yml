@@ -57,12 +57,12 @@ jobs:
         run: |
           pwd
           ls -lrt
-          python3 Acronym.py
+          python3 swap.py
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
         with: # Artifact name
-              name: "Acronym.py"
+              name: "swap.py"
                   # A file, directory or wildcard pattern that describes what to upload
               path: '.' 
                   # The desired behavior if no files are found using the provided path.
