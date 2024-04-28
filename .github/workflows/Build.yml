@@ -36,16 +36,7 @@ jobs:
           pwd
           ls -lrt
           python3 QR_Code_Simulator.py
-          cp QR_Code_Simulator.py ../.
-          pwd
-          ls -lrt
-      - name: check environment
-        run: | 
-              pwd
-              ls -lrt
-              cd ../.
-              pwd 
-              ls -lrt
+
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
         with: # Artifact name
