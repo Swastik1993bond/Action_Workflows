@@ -39,22 +39,36 @@ jobs:
           cp QR_Code_Simulator.py ../.
           pwd
           ls -lrt
-
-   artifactory:
-       runs-on: ubuntu-latest
-       steps:
-        - name: check environment
-          run: | 
+      - name: check environment
+        run: | 
               pwd
               ls -lrt
               cd ../.
               pwd 
               ls -lrt
-        - name: Upload a Build Artifact
-          uses: actions/upload-artifact@v4.3.3
-          with: # Artifact name
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.3
+        with: # Artifact name
               name: "*.py"
                   # A file, directory or wildcard pattern that describes what to upload
               path: '.' 
                   # The desired behavior if no files are found using the provided path.
+
+   # artifactory:
+   #     runs-on: ubuntu-latest
+   #     steps:
+   #      - name: check environment
+   #        run: | 
+   #            pwd
+   #            ls -lrt
+   #            cd ../.
+   #            pwd 
+   #            ls -lrt
+   #      - name: Upload a Build Artifact
+   #        uses: actions/upload-artifact@v4.3.3
+   #        with: # Artifact name
+   #            name: "*.py"
+   #                # A file, directory or wildcard pattern that describes what to upload
+   #            path: '.' 
+   #                # The desired behavior if no files are found using the provided path.
               
