@@ -34,4 +34,4 @@ jobs:
         run: |
           pwd
           ls -lrt
-          python3  pip install pyqrcode
+          python3 QR_Code_Simulator.py
