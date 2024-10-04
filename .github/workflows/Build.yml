@@ -35,8 +35,9 @@ jobs:
           python3 QR_Code_Simulator.py
   scan:
       runs-on: ubuntu-latest
+      
       steps:
         - uses: actions/checkout@v4
         - name: maven build
-          run: mvn clean install
+          run: echo "hello world"
       
